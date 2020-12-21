@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guess The Number</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body class="text-center">
+    <button type="button" class="collapsible" onmouseover="run()" onmouseout="run()">
+      <!-- Info Icon -->
+      <svg
+        width="1em"
+        height="1em"
+        viewBox="0 0 16 16"
+        class="bi bi-info-circle-fill"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+        />
+      </svg>
+      How To Play
+    </button>
+    <div class="content">
+      <!-- Game Rules -->
+      <ul class="rules">
+        <li>Computer will generate a random number between 1-100.</li>
+        <li>Enter your assumed number in the box.</li>
+        <li>Then it will show whether number you assumed is high or low.</li>
+        <li>
+          Once your assumed number will correct, it will display a sucess
+          message and total attempts.
+        </li>
+      </ul>
+    </div>
+
+    <main>
+      <h1 class="banner p-3">Guess The Number</h1>
+      <div class="form-group">
+        <input
+          id="number-guess"
+          class="form-control form-control-lg"
+          type="number"
+          placeholder="Enter the number you guessed"
+        />
+      </div>
+      <div id="result">
+        <!-- This is where the result will be-->
+      </div>
+      <button type="button" id="number-submit" class="btn btn-lg btn-primary">
+        Check Me
+      </button>
+      <button type="button" id="restart-game" class="btn btn-lg btn-danger">
+        Restart
+      </button>
+      <br />
+      <div id="history">
+        <!-- Guess History Container-->
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
